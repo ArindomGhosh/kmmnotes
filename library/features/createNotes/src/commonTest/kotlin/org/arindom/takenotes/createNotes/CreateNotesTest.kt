@@ -8,7 +8,7 @@ import io.mockative.coVerify
 import io.mockative.mock
 import io.mockative.once
 import kotlinx.coroutines.test.runTest
-import org.arindom.takenotes.createNotes.domain.entities.usecases.MutableNote
+import org.arindom.takenotes.createNotes.domain.entities.MutableNote
 import org.arindom.takenotes.createNotes.domain.usecases.CreateNotes
 import org.arindom.takenotes.data.NoteType
 import org.arindom.takenotes.data.domain.DomainResponse

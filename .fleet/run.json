@@ -1,0 +1,24 @@
+{
+  "configurations": [
+
+    {
+      "name": "iosApp",
+      "type": "xcode-app",
+      "workingDir": "/Users/arindomghosh/Desktop/programmes/kmm/TakeNote",
+      "buildTarget": {
+        "project": "iosApp",
+        "target": "iosApp"
+      },
+      "configuration": "Debug",
+      "destination": "iPhone 15 | iOS 17.0"
+    },
+    {
+      "name": "composeApp",
+      "type": "android-app",
+      "workingDir": "/Users/arindomghosh/Desktop/programmes/kmm/TakeNote",
+      "allowParallelRun": true,
+      "module": "TakeNote.composeApp.main",
+      "destination": "Pixel_3a_API_33_arm64-v8a"
+    }
+  ]
+}
