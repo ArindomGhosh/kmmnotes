@@ -1,0 +1,8 @@
+getAllNotesForLabel:
+SELECT * FROM notes
+WHERE label=?;
+
+getAllLabels:
+SELECT label FROM
+notes
+WHERE label IS NOT NULL ;

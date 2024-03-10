@@ -1,0 +1,11 @@
+getAllActiveNotes:
+SELECT * FROM notes
+WHERE isActive = 1;
+
+getAllInActiveNotes:
+SELECT * FROM notes
+WHERE isActive = 0;
+
+deleteInActiveNotes:
+DELETE FROM notes
+WHERE isActive = 0;

@@ -1,0 +1,18 @@
+insertNotes:
+INSERT OR REPLACE
+INTO notes (title, content, createdAt, noteType, label, isActive)
+VALUES ?;
+
+getAllNotes:
+SELECT * FROM notes;
+
+getNoteForId:
+SELECT * FROM notes
+WHERE _id = ?;
+
+deleteAllNotes:
+DELETE FROM notes;
+
+deleteNoteForId:
+DELETE FROM notes
+WHERE _id = ?;
