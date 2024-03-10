@@ -1,3 +1,11 @@
 package org.arindom.takenotes.createNotes.domain.entities
 
-data class Alert()
+enum class AlertType {
+  INFO,
+  ERR
+}
+
+data class AlertMessage(
+  val message: String,
+  val alertType: AlertType
+)

@@ -3,6 +3,17 @@ INSERT OR REPLACE
 INTO notes (title, content, createdAt, noteType, label, isActive)
 VALUES ?;
 
+updateNotes:
+UPDATE notes
+SET
+    title =? ,
+    content =? ,
+    createdAt=?,
+    noteType=?,
+    label=?,
+    isActive=?
+WHERE _id=?;
+
 getAllNotes:
 SELECT * FROM notes;
 
@@ -16,3 +27,7 @@ DELETE FROM notes;
 deleteNoteForId:
 DELETE FROM notes
 WHERE _id = ?;
+
+getNoteHavingTitle:
+SELECT * FROM notes
+WHERE title LIKE '%' || :substring || '%';

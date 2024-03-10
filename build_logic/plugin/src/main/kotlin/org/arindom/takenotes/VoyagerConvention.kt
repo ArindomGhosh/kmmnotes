@@ -8,7 +8,7 @@ import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.getByType
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 
-class VoyagersConvention : Plugin<Project> {
+class VoyagerConvention : Plugin<Project> {
   override fun apply(target: Project) {
     with(target) {
       pluginManager.apply {
@@ -20,8 +20,12 @@ class VoyagersConvention : Plugin<Project> {
       extensions.configure<KotlinMultiplatformExtension> {
         sourceSets {
           commonMain.dependencies {
-            implementation(libs.findLibrary("voyagers.navigator"))
-            implementation(libs.findLibrary("voyagers.screenModel"))
+            implementation(libs.findLibrary("voyager.navigator").get())
+            implementation(libs.findLibrary("voyager.screenModel").get())
+            // Not compatible with koin 3.5.3 version
+            // implementation(libs.voyager.koin)
+            // work around temporary fix
+            implementation(project(":library:voyagerKoin"))
           }
         }
       }

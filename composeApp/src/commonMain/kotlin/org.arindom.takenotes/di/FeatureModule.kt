@@ -1,11 +1,9 @@
 package org.arindom.takenotes.di
 
-import org.arindom.takenotes.Platform
-import org.arindom.takenotes.getPlatform
+import org.arindom.takenotes.createNotes.di.createNoteModule
+import org.arindom.takenotes.homeScreen.di.homeFeatureModule
 import org.koin.dsl.module
 
-val platform = module {
-  single<Platform> {
-    getPlatform()
-  }
+val featureModule = module {
+  includes(homeFeatureModule, createNoteModule)
 }

@@ -1,4 +1,4 @@
-package org.arindom.takenotes.createNotes.domain.entities.usecases
+package org.arindom.takenotes.createNotes.domain.entities
 
 import org.arindom.takenotes.data.NoteType
 import org.arindom.takenotes.database.Notes
